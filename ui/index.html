@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Ad Factory — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">◇</span>
+        <span class="logo-text">AI Ad Factory</span>
+      </div>
+      <p class="tagline">Zero-prompt ads for MSMEs</p>
+      <nav class="nav">
+        <button type="button" class="nav-item active" data-view="dashboard" aria-current="page">
+          <span class="nav-icon">▦</span>
+          <span>Dashboard</span>
+        </button>
+        <button type="button" class="nav-item" data-view="creatives">
+          <span class="nav-icon">◇</span>
+          <span>Creatives</span>
+          <span class="nav-badge">2</span>
+        </button>
+        <button type="button" class="nav-item" data-view="onboarding">
+          <span class="nav-icon">◆</span>
+          <span>Onboarding</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="business-pill">
+          <span class="business-pill-dot"></span>
+          Ethnic Wear Boutique
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <h1 class="page-title" data-title>Dashboard</h1>
+        <p class="page-subtitle" data-subtitle>Your campaigns at a glance</p>
+      </header>
+
+      <!-- Dashboard view -->
+      <section class="view" id="view-dashboard">
+        <div class="metrics">
+          <div class="metric-card">
+            <span class="metric-label">ROAS</span>
+            <span class="metric-value">3.2<span class="metric-unit">×</span></span>
+            <span class="metric-change positive">+12%</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Ad spend</span>
+            <span class="metric-value">₹18,400</span>
+            <span class="metric-change">of ₹25K</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Cost per lead</span>
+            <span class="metric-value">₹42</span>
+            <span class="metric-change positive">−8%</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Conversions</span>
+            <span class="metric-value">127</span>
+            <span class="metric-change">this week</span>
+          </div>
+        </div>
+        <div class="budget-bar">
+          <div class="budget-bar-fill" style="width: 74%"></div>
+          <span class="budget-bar-label">74% budget used</span>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Active campaigns</h2>
+          <div class="campaign-list">
+            <article class="campaign-card">
+              <div class="campaign-info">
+                <h3 class="campaign-name">Festive collection — Instagram</h3>
+                <p class="campaign-meta">Meta · Running · 2 creatives</p>
+              </div>
+              <div class="campaign-stats">
+                <span>12.4K impressions</span>
+                <span>₹4,200 spend</span>
+              </div>
+              <div class="campaign-actions">
+                <button type="button" class="btn btn-ghost">Pause</button>
+                <button type="button" class="btn btn-primary">View</button>
+              </div>
+            </article>
+            <article class="campaign-card">
+              <div class="campaign-info">
+                <h3 class="campaign-name">WhatsApp clicks — Search</h3>
+                <p class="campaign-meta">Meta · Running · 1 creative</p>
+              </div>
+              <div class="campaign-stats">
+                <span>8.1K impressions</span>
+                <span>₹3,100 spend</span>
+              </div>
+              <div class="campaign-actions">
+                <button type="button" class="btn btn-ghost">Pause</button>
+                <button type="button" class="btn btn-primary">View</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Creatives (approval) view -->
+      <section class="view hidden" id="view-creatives">
+        <p class="view-intro">Approve or reject creatives. Same flow will appear on WhatsApp.</p>
+        <div class="creative-list">
+          <article class="creative-card">
+            <div class="creative-preview">
+              <div class="creative-preview-image">
+                <span class="placeholder-text">Ad image</span>
+              </div>
+              <div class="creative-preview-copy">
+                <strong>New arrivals — Sarees & Kurtis</strong>
+                <p>Shop ethnic wear at [Your Boutique]. Free delivery above ₹999.</p>
+                <span class="creative-cta">Shop now</span>
+              </div>
+            </div>
+            <div class="creative-meta">Meta · Instagram Feed · Suggested by AI</div>
+            <div class="creative-actions">
+              <button type="button" class="btn btn-reject">Reject</button>
+              <button type="button" class="btn btn-approve">Approve</button>
+            </div>
+          </article>
+          <article class="creative-card">
+            <div class="creative-preview">
+              <div class="creative-preview-image">
+                <span class="placeholder-text">Ad image</span>
+              </div>
+              <div class="creative-preview-copy">
+                <strong>Diwali special — Up to 30% off</strong>
+                <p>Traditional wear for the festive season. Visit us in Mumbai.</p>
+                <span class="creative-cta">Get offer</span>
+              </div>
+            </div>
+            <div class="creative-meta">Meta · Facebook · Suggested by AI</div>
+            <div class="creative-actions">
+              <button type="button" class="btn btn-reject">Reject</button>
+              <button type="button" class="btn btn-approve">Approve</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Onboarding preview view -->
+      <section class="view hidden" id="view-onboarding">
+        <p class="view-intro">This is how businesses will onboard via WhatsApp — zero forms, one message.</p>
+        <div class="onboarding-demo">
+          <div class="chat-window">
+            <div class="chat-message bot">
+              <p>Hi! I’m your AI Ad Factory assistant. Tell me about your business in one line — for example: <em>“I run a boutique in Mumbai selling ethnic wear.”</em></p>
+            </div>
+            <div class="chat-message user">
+              <p>I run a boutique in Mumbai selling ethnic wear.</p>
+            </div>
+            <div class="chat-message bot">
+              <p>Got it. I’ve set:</p>
+              <ul>
+                <li><strong>Category:</strong> Fashion Retail → Ethnic Wear</li>
+                <li><strong>Location:</strong> Mumbai (local radius)</li>
+                <li><strong>Products:</strong> Sarees, Kurtis, Lehengas</li>
+              </ul>
+              <p>What’s your monthly ad budget? (e.g. ₹15,000 – ₹50,000)</p>
+            </div>
+            <div class="chat-input-row">
+              <input type="text" class="chat-input" placeholder="Type your reply…" value="₹25,000" readonly />
+              <button type="button" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+          <div class="onboarding-extract">
+            <h3>Auto-extracted (zero prompt)</h3>
+            <ul>
+              <li>Business: Ethnic Wear Boutique</li>
+              <li>Location: Mumbai</li>
+              <li>Audience: Women 25–45</li>
+              <li>Budget: ₹25,000/mo</li>
+              <li>Goals: Store visits, WhatsApp inquiries</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
